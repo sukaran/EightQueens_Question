@@ -42,24 +42,24 @@ public class GameStrategy {
 		//diagonals
 		for(int i=row+1,j=col+1;i<8 && j<8;i++,j++) {
 			if(placedQueens[i][j]) {
-				return false;
+				isValid=false;
 			}
 		}
 		
 		for(int i=row-1,j=col-1;i>=0 && j>=0;i--,j--) {
 			if(placedQueens[i][j]) {
-				return false;
+				isValid=false;
 			}
 		}
 		
 		for(int i = row+1,j=col-1;i<8 && j>=0 ;i++,j--) {
 			if(placedQueens[i][j]) {
-				return false;
+				isValid=false;
 			}
 		}
 		for(int i = row-1,j=col+1;i>=0 && j<8 ;i--,j++) {
 			if(placedQueens[i][j]) {
-				return false;
+				isValid=false;
 			}
 		}
 		if(isValid) {
